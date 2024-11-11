@@ -1,51 +1,163 @@
+const flowbite = require("flowbite-react/tailwind");
+
 import type { Config } from "tailwindcss";
 
 export default {
-
-  // Customizing via preset file:
-
-  presets: [require('./my-preset.ts')],
-
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+
+    flowbite.content(),
   ],
+  theme: {
+    colors: {
+      primary: "#ed7431",
+      white: "#FFFFFF",
+      gray: {
+        "100": "#F3F4F6",
+        "200": "#E5E7EB",
+        "300": "#D1D5DB",
+        "500": "#6B7280",
+        "800": "#1F2937",
+        "900": "#111827",
+      },
+      zinc: {
+        "200": "#E4E4E7"
+      },
+      stone: {
+        "200": "#E7E5E4"
+      }
+    },
+    margin: {
+      "4": "16px",
+    },
+    padding: {
+      "3": "12px",
+      "4": "16px",
+      "5": "20px",
+    },
+    width: {
+      "3": "12px",
+      full: "100%",
+    },
+    height: {
+      "3": "12px",
+    },
+    borderRadius: {
+      "full": "9999px",
+    },
+    gap: {
+      "3": "12px"
+    },
+    boxShadow: {
+      "inner": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)"
+    },
+    borderWidth: {
+      DEFAULT: '1px',
+    },
+    fontWeight: {
+      bold: '700',
+    }
+  },
+  corePlugins: {
+    accentColor: false,
+    animation: false,
+    aspectRatio: false,
+    backdropBlur: false,
+    backdropBrightness: false,
+    backdropContrast: false,
+    backdropGrayscale: false,
+    backdropHueRotate: false,
+    backdropInvert: false,
+    backdropOpacity: false,
+    backdropSaturate: false,
+    backdropSepia: false,
+    backgroundImage: false,
+    backgroundOpacity: false,
+    backgroundPosition: false,
+    backgroundSize: false,
+    blur: false,
+    caretColor: false,
+    columns: false,
+    container: false,
+    content: false,
+    contrast: false,
+    cursor: false,
+    dropShadow: false,
+    fill: false,
+    filter: false,
+    fontSmoothing: false,
+    fontVariantNumeric: false,
+    forcedColorAdjust: false,
+    grayscale: false,
+    gradientColorStops: false,
+    hueRotate: false,
+    hyphens: false,
+    isolation: false,
+    lineClamp: false,
+    mixBlendMode: false,
+    objectFit: false,
+    objectPosition: false,
+    opacity: false,
+    order: false,
+    outlineColor: false,
+    outlineOffset: false,
+    outlineStyle: false,
+    outlineWidth: false,
+    overflow: false,
+    overscrollBehavior: false,
+    placeholderColor: false,
+    placeholderOpacity: false,
+    pointerEvents: false,
+    ringColor: false,
+    ringOffsetColor: false,
+    ringOffsetWidth: false,
+    ringOpacity: false,
+    ringWidth: false,
+    rotate: false,
+    saturate: false,
+    scale: false,
+    scrollBehavior: false,
+    scrollMargin: false,
+    scrollPadding: false,
+    scrollSnapAlign: false,
+    scrollSnapStop: false,
+    scrollSnapType: false,
+    sepia: false,
+    size: false,
+    skew: false,
+    stroke: false,
+    strokeWidth: false,
+    tableLayout: false,
+    textDecoration: false,
+    textDecorationColor: false,
+    textDecorationStyle: false,
+    textDecorationThickness: false,
+    textIndent: false,
+    textOpacity: false,
+    textOverflow: false,
+    textTransform: false,
+    textUnderlineOffset: false,
+    textWrap: false,
+    touchAction: false,
+    transform: false,
+    transformOrigin: false,
+    transitionDelay: false,
+    transitionDuration: false,
+    transitionProperty: false,
+    transitionTimingFunction: false,
+    translate: false,
+    userSelect: false,
+    verticalAlign: false,
+    visibility: false,
+    willChange: false,
+    wordBreak: false,
+    zIndex: false,
+    inset: false,
+    position: false,
+  },
 
-  // Customizing via theme option:
-
-  // theme: {
-  //   colors: {
-  //     primary: {
-  //       light: "#85d7ff",
-  //       DEFAULT: "#1fb6ff",
-  //       dark: "#009eeb",
-  //     },
-  //     secondry: {
-  //       light: "#ff7ce5",
-  //       DEFAULT: "#ff49db",
-  //       dark: "#ff16d1",
-  //     },
-  //   },
-  //   extend: {
-  //     flexGrow: {
-  //       2: "2",
-  //       3: "3",
-  //     },
-  //     zIndex: {
-  //       60: "60",
-  //       70: "70",
-  //       80: "80",
-  //       90: "90",
-  //       100: "100",
-  //     },
-  //   },
-  // },
-
-  // This will disable every accentColor classes from tailwind import
-
-  // corePlugins: {
-  //   accentColor: false
-  // },
-  plugins: [],
+  // plugins: [flowbite.plugin()],
 } satisfies Config;

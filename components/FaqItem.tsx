@@ -1,5 +1,7 @@
+import { AccordionContent, AccordionTitle } from "flowbite-react";
 import FaqAnswerItem from "./FaqAnswerItem";
 import FaqQuestionItem from "./FaqQuestionItem";
+import { customAccordionTheme } from "@/lib/custom-flowbite-theme";
 
 export default function FaqItem({
   question,
@@ -11,9 +13,13 @@ export default function FaqItem({
   index: number;
 }) {
   return (
-    <div key={index} className="">
-      <FaqQuestionItem index={index} question={question} />
-      <FaqAnswerItem index={index} answer={answer} />
-    </div>
+    <>
+      <AccordionTitle theme={customAccordionTheme?.title}>
+        <FaqQuestionItem question={question} />
+      </AccordionTitle>
+      <AccordionContent theme={customAccordionTheme?.content}>
+        <FaqAnswerItem answer={answer} />
+      </AccordionContent>
+    </>
   );
 }

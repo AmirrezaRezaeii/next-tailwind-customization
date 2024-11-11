@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <div>
-      <p className="text-Primary">TEST</p>
+      <p className="text-primary">TEST</p>
       <Faq faqs={faqs} />
     </div>
   );
