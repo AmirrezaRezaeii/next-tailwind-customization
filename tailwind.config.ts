@@ -157,6 +157,10 @@ export default {
     zIndex: false,
     inset: false,
     position: false,
+    lineHeight: false,
+    maxHeight: false,
+    maxWidth: false,
+    space: false,
   },
 
   // plugins: [flowbite.plugin()],
